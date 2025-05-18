@@ -26,16 +26,15 @@ const ComparisonSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Transformasi Anda Bersama Ebook Jenius
           </h2>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto">
             Lihat bagaimana Ebook Jenius dapat membantu Anda beralih dari keraguan menjadi keahlian.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
-          {/* Before Card */}
           <Card className="shadow-lg border-red-200">
             <CardHeader className="bg-red-50">
-              <CardTitle className="text-2xl font-semibold text-red-700 flex items-center">
+              <CardTitle className="text-xl sm:text-2xl font-semibold text-red-700 flex items-center">
                 <XCircle className="mr-2" size={28} />
                 Sebelum Membeli Ebook
               </CardTitle>
@@ -43,7 +42,7 @@ const ComparisonSection = () => {
             <CardContent className="p-6">
               <ul className="space-y-4">
                 {beforePoints.map((point, index) => (
-                  <li key={index} className="flex items-start text-gray-700">
+                  <li key={index} className="flex items-start text-sm sm:text-base text-gray-700">
                     {point.icon}
                     <span>{point.text}</span>
                   </li>
@@ -52,10 +51,9 @@ const ComparisonSection = () => {
             </CardContent>
           </Card>
 
-          {/* After Card */}
           <Card className="shadow-lg border-green-200">
             <CardHeader className="bg-green-50">
-              <CardTitle className="text-2xl font-semibold text-green-700 flex items-center">
+              <CardTitle className="text-xl sm:text-2xl font-semibold text-green-700 flex items-center">
                 <CheckCircle2 className="mr-2" size={28} />
                 Setelah Membeli Ebook
               </CardTitle>
@@ -63,7 +61,7 @@ const ComparisonSection = () => {
             <CardContent className="p-6">
               <ul className="space-y-4">
                 {afterPoints.map((point, index) => (
-                  <li key={index} className="flex items-start text-gray-700">
+                  <li key={index} className="flex items-start text-sm sm:text-base text-gray-700">
                     {point.icon}
                     <span>{point.text}</span>
                   </li>
@@ -75,7 +73,7 @@ const ComparisonSection = () => {
         
         <div className="text-center mt-12">
             <TrendingUp size={48} className="mx-auto text-blue-600 mb-4" />
-            <p className="text-xl text-gray-700">
+            <p className="text-base md:text-xl text-gray-700">
                 Investasi dalam diri Anda adalah investasi terbaik. Mulai transformasi Anda sekarang!
             </p>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
 import CountdownDisplay from './CountdownDisplay';
 import { Button } from './ui/button';
 import { AlertTriangle, Tag } from 'lucide-react';
@@ -81,7 +81,7 @@ const LimitedOfferCountdown: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-red-700 mb-4">
             Sayang Sekali, Penawaran Telah Berakhir!
           </h2>
-          <p className="text-lg text-red-600 mb-8">
+          <p className="text-base sm:text-lg text-red-600 mb-8">
             Jangan lewatkan kesempatan berikutnya. Ikuti kami untuk update promo terbaru!
           </p>
         </div>
@@ -98,7 +98,7 @@ const LimitedOfferCountdown: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-yellow-700 mb-2">
           Penawaran Spesial Akan Segera Berakhir!
         </h2>
-        <p className="text-lg text-yellow-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-yellow-600 mb-8 max-w-2xl mx-auto">
           Jangan sampai ketinggalan harga promo untuk semua Ebook Jenius. Dapatkan sekarang sebelum waktu habis!
         </p>
         <div className="flex justify-center items-center my-8">
@@ -113,7 +113,7 @@ const LimitedOfferCountdown: React.FC = () => {
         <Button 
           asChild 
           size="lg" 
-          className="bg-red-600 hover:bg-red-700 text-white text-xl px-10 py-7 rounded-md font-semibold shadow-lg transform transition-transform hover:scale-105"
+          className="bg-red-600 hover:bg-red-700 text-white text-base px-6 py-4 md:text-xl md:px-10 md:py-7 rounded-md font-semibold shadow-lg transform transition-transform hover:scale-105"
         >
           <Link to="#cta">
             Klaim Penawaran Sekarang!
