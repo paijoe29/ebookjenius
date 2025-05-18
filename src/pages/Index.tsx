@@ -11,8 +11,9 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFormSection from '@/components/ContactFormSection';
 import AnimatedSection from '@/components/AnimatedSection';
 import LimitedOfferCountdown from '@/components/LimitedOfferCountdown';
+import FreeEbookOfferPopup from '@/components/FreeEbookOfferPopup';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Code, Zap, ShoppingCart } from 'lucide-react'; // Added ShoppingCart
+import { BookOpen, Code, Zap, ShoppingCart } from 'lucide-react';
 
 const Index = () => {
   const location = useLocation();
@@ -37,6 +38,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
+      <FreeEbookOfferPopup 
+        delaySeconds={5}
+        ebookTitle="GRATIS: Ebook Panduan Prompt AI!"
+        ebookDescription="Pelajari dasar-dasar membuat prompt efektif untuk ChatGPT dan AI lainnya. Tingkatkan produktivitas Anda sekarang!"
+        ctaText="Download Gratis Sekarang"
+        ctaLink="https://lynk.id/orifin" // GANTI DENGAN LINK EBOOK ANDA
+        // ebookImageUrl="https://via.placeholder.com/300x400.png?text=Cover+Ebook+Gratis" // Opsional: URL gambar cover ebook
+      />
 
       {/* Hero Section */}
       <div id="hero" className="bg-blue-600 text-white py-16 overflow-hidden">
@@ -110,8 +119,10 @@ const Index = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="pb-8 md:pb-12 px-6 md:px-10">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white w-full md:w-auto text-lg px-8 py-6 rounded-lg font-semibold">
-                    <ShoppingCart size={20} className="mr-2" /> Beli Sekarang
+                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white w-full md:w-auto text-lg px-8 py-6 rounded-lg font-semibold">
+                    <a href="https://lynk.id/orifin/order/prompt-jenius" target="_blank" rel="noopener noreferrer"> {/* GANTI DENGAN LINK PEMBELIAN ANDA */}
+                      <ShoppingCart size={20} className="mr-2" /> Beli Sekarang
+                    </a>
                   </Button>
                 </CardFooter>
               </div>
@@ -151,8 +162,10 @@ const Index = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="pb-8 md:pb-12 px-6 md:px-10">
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 w-full md:w-auto text-lg px-8 py-6 rounded-lg font-semibold">
-                    <ShoppingCart size={20} className="mr-2" /> Beli Sekarang
+                  <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 w-full md:w-auto text-lg px-8 py-6 rounded-lg font-semibold">
+                    <a href="https://lynk.id/orifin/" target="_blank" rel="noopener noreferrer"> {/* GANTI DENGAN LINK PEMBELIAN ANDA */}
+                      <ShoppingCart size={20} className="mr-2" /> Beli Sekarang
+                    </a>
                   </Button>
                 </CardFooter>
               </div>
@@ -192,8 +205,10 @@ const Index = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="pb-8 md:pb-12 px-6 md:px-10">
-                  <Button size="lg" className="bg-gray-800 hover:bg-black text-white w-full md:w-auto text-lg px-8 py-6 rounded-lg font-semibold">
-                    <ShoppingCart size={20} className="mr-2" /> Beli Sekarang
+                  <Button asChild size="lg" className="bg-gray-800 hover:bg-black text-white w-full md:w-auto text-lg px-8 py-6 rounded-lg font-semibold">
+                    <a href="https://lynk.id/orifin/" target="_blank" rel="noopener noreferrer"> {/* GANTI DENGAN LINK PEMBELIAN ANDA */}
+                      <ShoppingCart size={20} className="mr-2" /> Beli Sekarang
+                    </a>
                   </Button>
                 </CardFooter>
               </div>
