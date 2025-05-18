@@ -104,11 +104,11 @@ const Index = () => {
                 </div>
               </div>
               <div className="md:w-3/5 flex flex-col justify-center">
-                <CardHeader className="pt-6 md:pt-12 px-6 md:px-10">
-                  <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700">Prompt Jenius</CardTitle>
-                  <CardDescription className="text-base sm:text-lg text-gray-600 mt-2">Kuasai Seni Berbicara dengan AI</CardDescription>
+                <CardHeader className="pt-8 md:pt-12 px-6 md:px-10 pb-6 border-b border-blue-100">
+                  <CardTitle className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-700 mb-1">Prompt Jenius</CardTitle>
+                  <CardDescription className="text-lg sm:text-xl text-blue-600 italic">Kuasai Seni Berbicara dengan AI</CardDescription>
                 </CardHeader>
-                <CardContent className="text-gray-700 leading-relaxed px-6 md:px-10">
+                <CardContent className="text-gray-700 leading-relaxed px-6 md:px-10 pt-6">
                   <p className="mb-6 text-sm sm:text-base">
                     Bosan dengan jawaban AI yang biasa saja? Ebook ini akan membongkar formula rahasia untuk menciptakan prompt yang menghasilkan output luar biasa, kreatif, dan tepat sasaran. Jadilah master komunikasi dengan kecerdasan buatan!
                   </p>
@@ -147,11 +147,11 @@ const Index = () => {
                 </div>
               </div>
               <div className="md:w-3/5 flex flex-col justify-center">
-                <CardHeader className="pt-6 md:pt-12 px-6 md:px-10">
-                  <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-600">Vibe Coding Jenius</CardTitle>
-                  <CardDescription className="text-base sm:text-lg text-gray-600 mt-2">Temukan Flow State dalam Ngoding</CardDescription>
+                <CardHeader className="pt-8 md:pt-12 px-6 md:px-10 pb-6 border-b border-yellow-200">
+                  <CardTitle className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-600 mb-1">Vibe Coding Jenius</CardTitle>
+                  <CardDescription className="text-lg sm:text-xl text-yellow-500 italic">Temukan Flow State dalam Ngoding</CardDescription>
                 </CardHeader>
-                <CardContent className="text-gray-700 leading-relaxed px-6 md:px-10">
+                <CardContent className="text-gray-700 leading-relaxed px-6 md:px-10 pt-6">
                   <p className="mb-6 text-sm sm:text-base">
                     Ngoding terasa berat dan membosankan? Ebook ini bukan hanya tentang sintaks, tapi tentang membangun kebiasaan dan pola pikir agar Anda bisa ngoding dengan santai, efisien, dan penuh semangat. Rasakan "vibe" ngoding yang sebenarnya!
                   </p>
@@ -190,11 +190,11 @@ const Index = () => {
                 </div>
               </div>
               <div className="md:w-3/5 flex flex-col justify-center">
-                <CardHeader className="pt-6 md:pt-12 px-6 md:px-10">
-                  <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Digital Marketing Jenius</CardTitle>
-                  <CardDescription className="text-base sm:text-lg text-gray-600 mt-2">Dominasi Dunia Online</CardDescription>
+                <CardHeader className="pt-8 md:pt-12 px-6 md:px-10 pb-6 border-b border-gray-200">
+                  <CardTitle className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-1">Digital Marketing Jenius</CardTitle>
+                  <CardDescription className="text-lg sm:text-xl text-gray-600 italic">Dominasi Dunia Online</CardDescription>
                 </CardHeader>
-                <CardContent className="text-gray-700 leading-relaxed px-6 md:px-10">
+                <CardContent className="text-gray-700 leading-relaxed px-6 md:px-10 pt-6">
                   <p className="mb-6 text-sm sm:text-base">
                     Ingin bisnis Anda meledak di dunia digital? Ebook ini adalah panduan lengkap strategi marketing online yang terbukti efektif, dari sosial media hingga SEO. Tarik pelanggan, tingkatkan penjualan, dan jadilah jenius marketing!
                   </p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { XCircle, CheckCircle2, TrendingUp } from 'lucide-react';
+import { XCircle, CheckCircle2, ArrowRightCircle, TrendingUp } from 'lucide-react';
 
 const beforePoints = [
   { text: "Bingung harus mulai dari mana belajar AI, coding, atau digital marketing.", icon: <XCircle className="text-red-500 mr-3 flex-shrink-0" size={24} /> },
@@ -20,64 +20,70 @@ const afterPoints = [
 
 const ComparisonSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="comparison" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Transformasi Anda Bersama Ebook Jenius
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <TrendingUp size={48} className="mx-auto text-blue-600 mb-6" />
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Dari Bingung Menjadi Jenius: Transformasi Anda
           </h2>
-          <p className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto">
-            Lihat bagaimana Ebook Jenius dapat membantu Anda beralih dari keraguan menjadi keahlian.
+          <p className="text-lg md:text-xl text-gray-700">
+            Lihat perbedaan nyata yang akan Anda rasakan sebelum dan sesudah mendalami koleksi Ebook Jenius.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          <Card className="shadow-lg border-red-200">
-            <CardHeader className="bg-red-50">
-              <CardTitle className="text-xl sm:text-2xl font-semibold text-red-700 flex items-center">
-                <XCircle className="mr-2" size={28} />
-                Sebelum Membeli Ebook
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <ul className="space-y-4">
-                {beforePoints.map((point, index) => (
-                  <li key={index} className="flex items-start text-sm sm:text-base text-gray-700">
-                    {point.icon}
-                    <span>{point.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+        <div className="relative">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <Card className="shadow-xl border-red-100 rounded-xl bg-red-50/30 flex flex-col p-6 md:p-8">
+              <CardHeader className="bg-transparent pt-0 pb-4">
+                <CardTitle className="text-2xl font-semibold text-red-700 flex items-center">
+                  <XCircle className="mr-3 flex-shrink-0" size={32} />
+                  Kondisi Sebelum Ebook
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-4">
+                  {beforePoints.map((point, index) => (
+                    <li key={index} className="flex items-start text-base text-gray-700">
+                      {point.icon}
+                      <span>{point.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
 
-          <Card className="shadow-lg border-green-200">
-            <CardHeader className="bg-green-50">
-              <CardTitle className="text-xl sm:text-2xl font-semibold text-green-700 flex items-center">
-                <CheckCircle2 className="mr-2" size={28} />
-                Setelah Membeli Ebook
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <ul className="space-y-4">
-                {afterPoints.map((point, index) => (
-                  <li key={index} className="flex items-start text-sm sm:text-base text-gray-700">
-                    {point.icon}
-                    <span>{point.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+            <Card className="shadow-xl border-green-100 rounded-xl bg-green-50/30 flex flex-col p-6 md:p-8">
+              <CardHeader className="bg-transparent pt-0 pb-4">
+                <CardTitle className="text-2xl font-semibold text-green-700 flex items-center">
+                  <CheckCircle2 className="mr-3 flex-shrink-0" size={32} />
+                  Hasil Setelah Ebook
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-4">
+                  {afterPoints.map((point, index) => (
+                    <li key={index} className="flex items-start text-base text-gray-700">
+                      {point.icon}
+                      <span>{point.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none">
+            <div className="bg-white p-2 rounded-full shadow-md">
+              <ArrowRightCircle size={40} className="text-gray-400" />
+            </div>
+          </div>
         </div>
         
-        <div className="text-center mt-12">
-            <TrendingUp size={48} className="mx-auto text-blue-600 mb-4" />
-            <p className="text-base md:text-xl text-gray-700">
-                Investasi dalam diri Anda adalah investasi terbaik. Mulai transformasi Anda sekarang!
+        <div className="text-center mt-12 md:mt-16">
+            <p className="text-lg md:text-xl text-gray-700">
+                Investasi dalam diri Anda adalah langkah awal menuju kesuksesan. <span className="font-semibold text-blue-600">Mulai transformasi Anda sekarang!</span>
             </p>
         </div>
-
       </div>
     </section>
   );

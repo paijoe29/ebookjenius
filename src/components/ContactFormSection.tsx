@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Mail, Send, MessageCircleQuestion } from 'lucide-react';
+import { Mail, Send, MessageCircleQuestion, Phone } from 'lucide-react';
 
 const ContactFormSection: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -17,92 +17,96 @@ const ContactFormSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gray-50">
+    <section id="contact-form" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 md:items-stretch"> {/* Changed to items-stretch */}
-          {/* Left Column: Text Content in a Card */}
-          <div className="md:w-1/2 w-full">
-            <Card className="shadow-xl border-gray-200 h-full flex flex-col"> {/* Added h-full and flex flex-col */}
-              <CardHeader className="text-center md:text-left">
-                <MessageCircleQuestion size={56} className="mx-auto md:mx-0 text-blue-600 mb-4" />
-                <CardTitle className="text-3xl md:text-4xl font-bold text-gray-900">
-                  Punya Pertanyaan?
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700 flex-grow text-center md:text-left"> {/* Added flex-grow */}
-                <p className="text-lg mb-4">
-                  Kami siap membantu! Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan, masukan, atau ingin berdiskusi lebih lanjut mengenai ebook kami.
-                </p>
-                <p className="text-base">
-                  Isi formulir di samping atau hubungi kami melalui email di <a href="mailto:support@ebookjenius.com" className="text-blue-600 hover:underline">support@ebookjenius.com</a>.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Kami Siap Mendengarkan Anda
+          </h2>
+          <p className="text-lg md:text-xl text-gray-700">
+            Punya pertanyaan, saran, atau ingin berkolaborasi? Jangan ragu untuk menghubungi tim Ebook Jenius.
+          </p>
+        </div>
 
-          {/* Right Column: Contact Form Card */}
-          <div className="md:w-1/2 w-full">
-            <Card className="shadow-xl border-gray-200 h-full flex flex-col"> {/* Added h-full and flex flex-col */}
-              <CardHeader>
-                <div className="flex items-center mb-2">
-                  <Mail size={28} className="text-blue-600 mr-3" />
-                  <CardTitle className="text-2xl font-semibold text-gray-900">
-                    Kirim Pesan Langsung
-                  </CardTitle>
-                </div>
-                <CardDescription className="text-gray-600">
-                  Kami akan segera merespons pesan Anda.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-grow"> {/* Added flex-grow to allow button to be at bottom if needed */}
-                <form onSubmit={handleSubmit} className="space-y-6 flex flex-col h-full">
-                  <div className="flex-grow space-y-6"> {/* Group form fields */}
-                    <div>
-                      <Label htmlFor="name" className="text-base font-medium text-gray-800">Nama Lengkap</Label>
-                      <Input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        placeholder="Masukkan nama Anda" 
-                        required 
-                        className="mt-1 text-base"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="email" className="text-base font-medium text-gray-800">Alamat Email</Label>
-                      <Input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="email@contoh.com" 
-                        required 
-                        className="mt-1 text-base"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="message" className="text-base font-medium text-gray-800">Pesan Anda</Label>
-                      <Textarea 
-                        id="message" 
-                        name="message" 
-                        placeholder="Tuliskan pesan Anda di sini..." 
-                        rows={4} 
-                        required 
-                        className="mt-1 text-base"
-                      />
-                    </div>
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+          <Card className="shadow-xl border-transparent rounded-xl bg-slate-50/70 flex flex-col p-6 md:p-8">
+            <CardHeader className="pb-6">
+              <div className="p-3 bg-blue-100 rounded-full inline-block mb-5">
+                <MessageCircleQuestion size={36} className="text-blue-600" />
+              </div>
+              <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">
+                Info Kontak & Bantuan
+              </CardTitle>
+              <CardDescription className="text-gray-600 mt-2 text-base">
+                Kami berkomitmen untuk memberikan dukungan terbaik.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="text-gray-700 flex-grow space-y-6">
+              <p className="text-base">
+                Anda bisa menghubungi kami melalui formulir di samping, atau langsung melalui:
+              </p>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-1 flex items-center">
+                  <Mail size={20} className="mr-2.5 text-blue-600 flex-shrink-0" /> Email Dukungan
+                </h4>
+                <a href="mailto:support@ebookjenius.com" className="text-blue-600 hover:underline break-all">support@ebookjenius.com</a>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-1 flex items-center">
+                  <Phone size={20} className="mr-2.5 text-blue-600 flex-shrink-0" /> WhatsApp (Chat Only)
+                </h4>
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                  +62 812-3456-7890 (Contoh)
+                </a>
+              </div>
+              <p className="text-sm text-gray-500 pt-4 border-t border-slate-200">
+                Tim kami akan merespons dalam 1x24 jam kerja.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-xl border-transparent rounded-xl bg-slate-50/70 flex flex-col p-6 md:p-8">
+            <CardHeader className="pb-6">
+               <div className="p-3 bg-green-100 rounded-full inline-block mb-5">
+                <Send size={36} className="text-green-600" />
+              </div>
+              <CardTitle className="text-2xl md:text-3xl font-semibold text-gray-900">
+                Kirim Pesan Langsung
+              </CardTitle>
+              <CardDescription className="text-gray-600 mt-2 text-base">
+                Isi formulir di bawah ini dan kami akan segera menghubungi Anda.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <form onSubmit={handleSubmit} className="space-y-6 flex flex-col h-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
+                  <div>
+                    <Label htmlFor="name" className="text-sm font-medium text-gray-800">Nama Lengkap</Label>
+                    <Input type="text" id="name" name="name" placeholder="Nama Anda" required className="mt-1 text-base bg-white"/>
                   </div>
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-3 rounded-md font-semibold mt-auto" /* Added mt-auto */
-                    size="lg"
-                  >
-                    Kirim Pesan
-                    <Send size={20} className="ml-2" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+                  <div>
+                    <Label htmlFor="email" className="text-sm font-medium text-gray-800">Alamat Email</Label>
+                    <Input type="email" id="email" name="email" placeholder="email@contoh.com" required className="mt-1 text-base bg-white"/>
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="subject" className="text-sm font-medium text-gray-800">Subjek Pesan</Label>
+                  <Input type="text" id="subject" name="subject" placeholder="Contoh: Pertanyaan tentang Ebook" required className="mt-1 text-base bg-white"/>
+                </div>
+                <div>
+                  <Label htmlFor="message" className="text-sm font-medium text-gray-800">Pesan Anda</Label>
+                  <Textarea id="message" name="message" placeholder="Tuliskan detail pesan Anda di sini..." rows={5} required className="mt-1 text-base bg-white"/>
+                </div>
+                <Button 
+                  type="submit" 
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-base py-3 px-8 rounded-lg font-semibold mt-auto self-start"
+                  size="lg"
+                >
+                  Kirim Pesan Sekarang
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
