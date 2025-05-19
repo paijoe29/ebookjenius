@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroPricingCard from '@/components/HeroPricingCard';
-import AnimatedSection from '@/components/AnimatedSection';
-// Removed Card imports as they are now in child components
+import AnimatedSection from '@/components/AnimatedSection'; // Masih diimpor untuk section lain
 
 // Lazy load sections
 const FeaturesSection = lazy(() => import('@/components/FeaturesSection'));
@@ -56,7 +55,8 @@ const Index = () => {
       {/* Hero Section */}
       <div id="hero" className="bg-blue-600 text-white py-16 overflow-hidden">
         <section className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
-          <AnimatedSection animationType="from-left" delay={200} className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+          {/* Konten Hero Kiri tanpa AnimatedSection */}
+          <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Kuasai AI, Coding,<br />& Digital Marketing<br />dengan Ebook Jenius
             </h1>
@@ -71,10 +71,11 @@ const Index = () => {
                 Hubungi Kami
               </Button>
             </div>
-          </AnimatedSection>
-          <AnimatedSection animationType="from-right" delay={400} className="md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
+          </div>
+          {/* Konten Hero Kanan (Pricing Card) tanpa AnimatedSection */}
+          <div className="md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
             <HeroPricingCard />
-          </AnimatedSection>
+          </div>
         </section>
       </div>
 
