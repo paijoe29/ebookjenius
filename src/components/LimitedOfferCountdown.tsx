@@ -54,7 +54,7 @@ const LimitedOfferCountdown: React.FC = () => {
 
   if (!isClient || timeLeft === undefined) {
     return (
-      <section className="py-12 bg-yellow-50 text-center">
+      <section className="py-12 md:py-24 bg-yellow-50 text-center">
         <div className="container mx-auto px-4">
           <div className="animate-pulse">
             <h2 className="text-3xl md:text-4xl font-bold text-yellow-700 mb-4 flex items-center justify-center">
@@ -75,7 +75,7 @@ const LimitedOfferCountdown: React.FC = () => {
 
   if (timeLeft === null) {
     return (
-      <section className="py-12 bg-red-100 text-center">
+      <section className="py-12 md:py-24 bg-red-100 text-center">
         <div className="container mx-auto px-4">
           <AlertTriangle size={48} className="mx-auto text-red-600 mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold text-red-700 mb-4">
@@ -92,13 +92,13 @@ const LimitedOfferCountdown: React.FC = () => {
   const isEndingSoon = timeLeft.days === 0 && timeLeft.hours < 12;
 
   return (
-    <section className="py-12 bg-yellow-50 text-center">
+    <section className="py-16 md:py-24 bg-yellow-50 text-center">
       <div className="container mx-auto px-4">
-        <Tag size={48} className="mx-auto text-yellow-600 mb-4" />
-        <h2 className="text-3xl md:text-4xl font-bold text-yellow-700 mb-2">
+        <Tag size={48} className="mx-auto text-yellow-600 mb-6" />
+        <h2 className="text-3xl md:text-4xl font-bold text-yellow-700 mb-4">
           Penawaran Spesial Akan Segera Berakhir!
         </h2>
-        <p className="text-base sm:text-lg text-yellow-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-yellow-700 mb-8 max-w-2xl mx-auto"> {/* Changed text-yellow-600 to text-yellow-700 */}
           Jangan sampai ketinggalan harga promo untuk semua Ebook Jenius. Dapatkan sekarang sebelum waktu habis!
         </p>
         <div className="flex justify-center items-center my-8">

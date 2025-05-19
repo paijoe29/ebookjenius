@@ -1,19 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react'; // Import lazy and Suspense
 import { useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Navbar from '@/components/Navbar';
-import CallToAction from '@/components/CallToAction';
+// Import CallToAction, Footer, HeroPricingCard, etc. as static imports if they are needed immediately
 import Footer from '@/components/Footer';
 import HeroPricingCard from '@/components/HeroPricingCard';
-import FeaturesSection from '@/components/FeaturesSection';
-import ComparisonSection from '@/components/ComparisonSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import ContactFormSection from '@/components/ContactFormSection';
 import AnimatedSection from '@/components/AnimatedSection';
 import LimitedOfferCountdown from '@/components/LimitedOfferCountdown';
 import FreeEbookOfferPopup from '@/components/FreeEbookOfferPopup';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Code, Zap, ShoppingCart } from 'lucide-react';
+
+// Lazy load sections that are typically below the initial viewport
+const FeaturesSection = lazy(() => import('@/components/FeaturesSection'));
+const ComparisonSection = lazy(() => import('@/components/ComparisonSection'));
+const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
+const CallToAction = lazy(() => import('@/components/CallToAction'));
+const ContactFormSection = lazy(() => import('@/components/ContactFormSection'));
 
 const Index = () => {
   const location = useLocation();
@@ -79,19 +82,25 @@ const Index = () => {
         <hr className="border-t border-gray-200 my-10" />
       </div>
 
+      {/* Features Section (Lazy Loaded) */}
       <AnimatedSection as="section" animationType="from-bottom" id="features" className="container mx-auto px-4 py-16">
-        <FeaturesSection />
+        <Suspense fallback={null}> {/* Wrap lazy components with Suspense */}
+          <FeaturesSection />
+        </Suspense>
       </AnimatedSection>
       
+      {/* Comparison Section (Lazy Loaded) */}
       <AnimatedSection animationType="from-right" id="comparison">
-        <ComparisonSection />
+        <Suspense fallback={null}> {/* Wrap lazy components with Suspense */}
+          <ComparisonSection />
+        </Suspense>
       </AnimatedSection>
 
       <div className="container mx-auto px-4">
         <hr className="border-t border-gray-200 my-10" />
       </div>
 
-      {/* Ebook 1: Prompt Jenius */}
+      {/* Ebook 1: Prompt Jenius (Static Import - core content) */}
       <AnimatedSection as="section" animationType="from-left" delay={200} id="prompt-jenius" className="py-16">
         <div className="container mx-auto px-4">
           <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-blue-200 rounded-xl">
@@ -134,7 +143,7 @@ const Index = () => {
         <hr className="border-t border-gray-200 my-10" />
       </div>
 
-      {/* Ebook 2: Vibe Coding Jenius */}
+      {/* Ebook 2: Vibe Coding Jenius (Static Import - core content) */}
       <AnimatedSection as="section" animationType="from-right" delay={200} id="vibe-coding" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-yellow-300 rounded-xl">
@@ -177,7 +186,7 @@ const Index = () => {
         <hr className="border-t border-gray-200 my-10" />
       </div>
 
-      {/* Ebook 3: Digital Marketing Jenius */}
+      {/* Ebook 3: Digital Marketing Jenius (Static Import - core content) */}
       <AnimatedSection as="section" animationType="from-left" delay={200} id="digital-marketing" className="py-16">
         <div className="container mx-auto px-4">
           <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-gray-300 rounded-xl">
@@ -220,24 +229,33 @@ const Index = () => {
         <hr className="border-t border-gray-200 my-10" />
       </div>
       
+      {/* Testimonials Section (Lazy Loaded) */}
       <AnimatedSection as="section" animationType="fade-in" delay={200} id="testimonials">
-        <TestimonialsSection />
+        <Suspense fallback={null}> {/* Wrap lazy components with Suspense */}
+          <TestimonialsSection />
+        </Suspense>
       </AnimatedSection>
 
       <div className="container mx-auto px-4">
         <hr className="border-t border-gray-200 my-10" />
       </div>
 
+      {/* Call to Action Section (Lazy Loaded) */}
       <AnimatedSection as="section" animationType="fade-in" delay={300} id="cta">
-        <CallToAction />
+        <Suspense fallback={null}> {/* Wrap lazy components with Suspense */}
+          <CallToAction />
+        </Suspense>
       </AnimatedSection>
       
       <div className="container mx-auto px-4">
         <hr className="border-t border-gray-200 my-10" />
       </div>
 
+      {/* Contact Form Section (Lazy Loaded) */}
       <AnimatedSection as="section" animationType="from-bottom" delay={200} id="contact-form">
-        <ContactFormSection />
+        <Suspense fallback={null}> {/* Wrap lazy components with Suspense */}
+          <ContactFormSection />
+        </Suspense>
       </AnimatedSection>
 
       <Footer />

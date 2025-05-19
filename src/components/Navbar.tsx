@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="animate-marquee whitespace-nowrap">
           <span className="mx-4">✨ PROMO SPESIAL: Dapatkan Koleksi Lengkap Ebook dengan Harga Terbaik! ✨</span>
           <span className="mx-4">✨ PROMO SPESIAL: Dapatkan Koleksi Lengkap Ebook dengan Harga Terbaik! ✨</span>
-          <span className="mx-4">✨ PROMO SPESIAL: Dapatkan Koleksi Lengkap Ebook dengan Harga Terbaik! ✨</span>
+          <span className="mx-4">✨ PROMO SPESIAL: Dapatkan Koleksi Lengputih Ebook dengan Harga Terbaik! ✨</span>
         </div>
       </div>
 
@@ -37,7 +37,8 @@ const Navbar = () => {
           {/* Logo or Site Title */}
           <Link to="/" className="flex items-center text-gray-900 hover:text-blue-600 transition-colors" onClick={closeMobileMenu}>
             <BookOpen className="h-8 w-8 mr-2 text-blue-600" />
-            <span className="text-2xl font-bold tracking-tight">
+            {/* Adjusted font size for mobile to potentially satisfy accessibility tools */}
+            <span className="text-xl md:text-2xl font-bold tracking-tight">
               Ebook
               <span className="text-blue-600">Jenius</span>
             </span>
