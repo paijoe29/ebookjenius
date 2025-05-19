@@ -9,7 +9,10 @@ import AnimatedSection from '@/components/AnimatedSection';
 import LimitedOfferCountdown from '@/components/LimitedOfferCountdown';
 import FreeEbookOfferPopup from '@/components/FreeEbookOfferPopup';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+
+// Import icons used in static sections directly
 import { BookOpen, Code, Zap, ShoppingCart } from 'lucide-react';
+
 
 // Lazy load sections that are typically below the initial viewport
 const FeaturesSection = lazy(() => import('@/components/FeaturesSection'));
@@ -29,7 +32,7 @@ const Index = () => {
         requestAnimationFrame(() => {
           const element = document.getElementById(elementId);
           if (element) {
-            element.scrollIntoView({ block: 'start' }); 
+            element.scrollIntoView({ block: 'start' });
           } else {
             console.warn(`Elemen dengan id '${elementId}' tidak ditemukan untuk di-scroll setelah rAF.`);
           }
@@ -41,7 +44,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
-      <FreeEbookOfferPopup 
+      <FreeEbookOfferPopup
         delaySeconds={5}
         ebookTitle="GRATIS: Ebook Panduan Prompt AI!"
         ebookDescription="Pelajari dasar-dasar membuat prompt efektif untuk ChatGPT dan AI lainnya. Tingkatkan produktivitas Anda sekarang!"
@@ -88,7 +91,7 @@ const Index = () => {
           <FeaturesSection />
         </Suspense>
       </AnimatedSection>
-      
+
       {/* Comparison Section (Lazy Loaded) */}
       <AnimatedSection animationType="from-right" id="comparison">
         <Suspense fallback={null}> {/* Wrap lazy components with Suspense */}
@@ -228,7 +231,7 @@ const Index = () => {
       <div className="container mx-auto px-4">
         <hr className="border-t border-gray-200 my-10" />
       </div>
-      
+
       {/* Testimonials Section (Lazy Loaded) */}
       <AnimatedSection as="section" animationType="fade-in" delay={200} id="testimonials">
         <Suspense fallback={null}> {/* Wrap lazy components with Suspense */}
@@ -246,7 +249,7 @@ const Index = () => {
           <CallToAction />
         </Suspense>
       </AnimatedSection>
-      
+
       <div className="container mx-auto px-4">
         <hr className="border-t border-gray-200 my-10" />
       </div>
