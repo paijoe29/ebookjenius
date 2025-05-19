@@ -1,4 +1,4 @@
-# Ebook Jenius - Landing Page Interaktif
+# Ebook Jenius - Landing Page 
 
 Selamat datang di repositori Ebook Jenius! Ini adalah proyek landing page yang dirancang untuk mempromosikan dan menjual koleksi ebook tentang AI, coding, dan digital marketing. Halaman ini dibangun dengan fokus pada pengalaman pengguna yang menarik, desain responsif, dan animasi yang halus.
 
@@ -38,10 +38,10 @@ Untuk menjalankan proyek ini di lingkungan lokal Anda, ikuti langkah-langkah ber
 
 1.  **Clone Repositori:**
     ```bash
-    git clone https://github.com/USERNAME_ANDA/NAMA_REPOSITORI_ANDA.git
-    cd NAMA_REPOSITORI_ANDA
+    git clone https://github.com/paijoe29/ebookjenius.git
+    cd ebookjenius
     ```
-    *(Ganti `USERNAME_ANDA` dan `NAMA_REPOSITORI_ANDA` dengan detail GitHub Anda)*
+
 
 2.  **Instal Dependensi:**
     Pastikan Anda memiliki Node.js dan npm (atau Yarn) terinstal.
