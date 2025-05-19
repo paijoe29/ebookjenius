@@ -5,8 +5,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroPricingCard from '@/components/HeroPricingCard';
 import AnimatedSection from '@/components/AnimatedSection';
-import LimitedOfferCountdown from '@/components/LimitedOfferCountdown';
-import FreeEbookOfferPopup from '@/components/FreeEbookOfferPopup';
 // Removed Card imports as they are now in child components
 
 // Lazy load sections
@@ -15,11 +13,11 @@ const ComparisonSection = lazy(() => import('@/components/ComparisonSection'));
 const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
 const CallToAction = lazy(() => import('@/components/CallToAction'));
 const ContactFormSection = lazy(() => import('@/components/ContactFormSection'));
-
-// Lazy load new ebook sections
 const EbookPromptJenius = lazy(() => import('@/components/EbookPromptJenius'));
 const EbookVibeCoding = lazy(() => import('@/components/EbookVibeCoding'));
 const EbookDigitalMarketing = lazy(() => import('@/components/EbookDigitalMarketing'));
+const LimitedOfferCountdown = lazy(() => import('@/components/LimitedOfferCountdown'));
+const FreeEbookOfferPopup = lazy(() => import('@/components/FreeEbookOfferPopup'));
 
 
 const Index = () => {
@@ -45,13 +43,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
-      <FreeEbookOfferPopup
-        delaySeconds={5}
-        ebookTitle="GRATIS: Ebook Panduan Prompt AI!"
-        ebookDescription="Pelajari dasar-dasar membuat prompt efektif untuk ChatGPT dan AI lainnya. Tingkatkan produktivitas Anda sekarang!"
-        ctaText="Download Gratis Sekarang"
-        ctaLink="https://lynk.id/orifin"
-      />
+      <Suspense fallback={null}>
+        <FreeEbookOfferPopup
+          delaySeconds={5}
+          ebookTitle="GRATIS: Ebook Panduan Prompt AI!"
+          ebookDescription="Pelajari dasar-dasar membuat prompt efektif untuk ChatGPT dan AI lainnya. Tingkatkan produktivitas Anda sekarang!"
+          ctaText="Download Gratis Sekarang"
+          ctaLink="https://lynk.id/orifin"
+        />
+      </Suspense>
 
       {/* Hero Section */}
       <div id="hero" className="bg-blue-600 text-white py-16 overflow-hidden">
@@ -78,9 +78,11 @@ const Index = () => {
         </section>
       </div>
 
-      <AnimatedSection animationType="fade-in" delay={100}>
-         <LimitedOfferCountdown />
-      </AnimatedSection>
+      <Suspense fallback={null}>
+        <AnimatedSection animationType="fade-in" delay={100}>
+           <LimitedOfferCountdown />
+        </AnimatedSection>
+      </Suspense>
 
       <div className="container mx-auto px-4">
         <hr className="border-t border-gray-200 my-10" />
