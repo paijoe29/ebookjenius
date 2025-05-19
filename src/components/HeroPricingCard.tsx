@@ -1,13 +1,12 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2 } from 'lucide-react'; // Using Lucide icon for checkmark
-import { cn } from '@/lib/utils'; // Utility for combining class names
+import { Card, CardContent, CardHeader } from "@/components/ui/card"; 
+import { CheckCircle2 } from 'lucide-react';
 
 const HeroPricingCard = () => {
-  const originalPrice = "Rp 387.000"; // 3 x Rp 129.000
+  const originalPrice = "Rp 387.000";
   const discountedPrice = "Rp 299.000";
-  const discountPercentage = "Diskon 23%"; // (387000 - 299000) / 387000 * 100 ≈ 22.7%
+  const discountPercentage = "Diskon 23%";
 
   return (
     <Card className="w-full max-w-sm bg-white shadow-xl rounded-lg relative">
@@ -20,10 +19,9 @@ const HeroPricingCard = () => {
       </div>
 
       <CardHeader className="bg-blue-700 text-white py-6 text-center">
-        {/* Changed CardTitle to render as h2 */}
-        <CardTitle asChild className="text-2xl font-bold">
-          <h2>Koleksi Lengkap Ebook</h2>
-        </CardTitle>
+        <h2 className="text-2xl font-bold leading-none tracking-tight">
+          Koleksi Lengkap Ebook
+        </h2>
       </CardHeader>
 
       <CardContent className="p-6">
