@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, BookOpen, X } from 'lucide-react'; // Import X icon for close
+import { Menu, X } from 'lucide-react'; // Import X icon for close
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,7 +62,13 @@ const Navbar = () => {
             <Button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-md text-sm">
               Koleksi Ebook
             </Button>
-            <Button variant="ghost" size="icon" onClick={toggleMobileMenu} className="hover:bg-gray-200">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={toggleMobileMenu} 
+              className="hover:bg-gray-200"
+              aria-label={isMobileMenuOpen ? "Tutup menu mobile" : "Buka menu mobile"} // Added aria-label
+            >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>

@@ -11,17 +11,18 @@ const HeroPricingCard = () => {
 
   return (
     <Card className="w-full max-w-sm bg-white shadow-xl rounded-lg relative">
-      <div 
-        className="absolute top-0 right-0 transform rotate-45 translate-x-1/2 -translate-y-1/2 
-                   bg-red-600 text-white text-xs font-bold uppercase 
+      <div
+        className="absolute top-0 right-0 transform rotate-45 translate-x-1/2 -translate-y-1/2
+                   bg-red-600 text-white text-xs font-bold uppercase
                    px-6 py-1 origin-bottom-left shadow-lg z-10"
       >
         PROMO SPESIAL
       </div>
 
       <CardHeader className="bg-blue-700 text-white py-6 text-center">
-        <CardTitle className="text-2xl font-bold">
-          Koleksi Lengkap Ebook
+        {/* Changed CardTitle to render as h2 */}
+        <CardTitle asChild className="text-2xl font-bold">
+          <h2>Koleksi Lengkap Ebook</h2>
         </CardTitle>
       </CardHeader>
 
