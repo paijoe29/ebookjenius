@@ -2,6 +2,8 @@
 
 Selamat datang di repositori Ebook Jenius! Ini adalah proyek landing page yang dirancang untuk mempromosikan dan menjual koleksi ebook tentang AI, coding, dan digital marketing. Halaman ini dibangun dengan fokus pada pengalaman pengguna yang menarik, desain responsif, dan animasi yang halus.
 
+![Screenshot](https://github.com/paijoe29/ebookjenius/blob/dc778bf680385e17a771df8ac83270507110fdef/public/Screenshot%202025-05-18%20at%2019.19.43.png)
+
 ## ✨ Fitur Utama
 
 *   **Desain Responsif**: Tampilan optimal di berbagai perangkat, mulai dari desktop hingga seluler.
